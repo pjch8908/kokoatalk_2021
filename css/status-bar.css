@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   margin: 5px 3px;
+  font-size: 20px;
 }
 
 .status-bar__column {
@@ -20,21 +21,58 @@
   align-items: center;
 }
 
+.status-bar__column:last-child i:last-child {
+  color: green;
+}
+
 .status-bar__column .fa-battery-full {
   margin: 0 5px;
 }
 
 .welcome-header {
-  margin: 90px 0;
+  margin: 100px 0;
   text-align: center;
 }
 
 .welcom-header__title {
-  font-size: 25px;
+  font-size: 45px;
   margin-bottom: 40px;
 }
 
 .welcom-header__text {
+  font-size: 20px;
   width: 60%;
   margin: auto;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 50px;
+}
+
+#login-form input {
+  border: none;
+  padding: 15px 0;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  border: 3px solid rgb(0, 0, 0, 0.1);
+  transition: border-color 0.4s ease-in-out;
+}
+
+#login-form input::placeholder {
+  color: rgb(0, 0, 0, 0.3);
+}
+
+#login-form input:focus {
+  border-color: var(--notbase-color);
+}
+
+#login-form a {
+  margin-top: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  opacity: 0.5;
 }
