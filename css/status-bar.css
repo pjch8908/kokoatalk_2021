@@ -32,16 +32,41 @@
 .welcome-header {
   margin: 100px 0;
   text-align: center;
+    
 }
 
 .welcom-header__title {
   font-size: 45px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  cursor: cell;
+}
+
+@keyframes heal {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+}
+
+.welcome-header i {
+  color: red;
+  display: none;
+  position: absolute;
+  top: 120px;
+  right: 200px;
+}
+
+.welcome-header:hover i {
+  display: block;
+  animation: heal 0.8s ease-in-out infinite;
 }
 
 .welcom-header__text {
-  font-size: 20px;
-  width: 60%;
+  font-size: 25px;
+  width: 80%;
   margin: auto;
 }
 
@@ -57,12 +82,16 @@
   border-radius: 5px;
   margin-bottom: 5px;
   font-size: 20px;
-  border: 3px solid rgb(0, 0, 0, 0.1);
-  transition: border-color 0.4s ease-in-out;
 }
 
 #login-form input::placeholder {
   color: rgb(0, 0, 0, 0.3);
+  padding-left: 10px;
+}
+
+#login-form input:not([type="submit"]) {
+  border: 3px solid rgb(0, 0, 0, 0.1);
+  transition: border-color 0.4s ease-in-out;
 }
 
 #login-form input:focus {
@@ -73,6 +102,16 @@
   margin-top: 20px;
   font-size: 20px;
   text-decoration: none;
-  color: black;
+  color:inherit
   opacity: 0.5;
+  text-align: center;
+}
+
+#login-form input[type="submit"] {
+  background-color: var(--notbase-color);
+  cursor: cell;
+}
+
+.fa-hand-holding-medical {
+  cursor: cell;
 }
