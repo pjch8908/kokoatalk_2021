@@ -1,9 +1,48 @@
 .nav {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  box-sizing: border-box;
   background-color: #f9f9fa;
-  padding: 20px 40px;
+  padding: 20px 50px;
+  border-radius: 30px 30px 0 0;
+  border-top: 1px solid rgba(114, 130, 30, 0.3);
+}
+
+.nav__link {
+  position: relative;
 }
 
 .nav__list {
+  color: #728226;
   display: flex;
   justify-content: space-between;
+}
+
+.nav__noitification {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--notbase-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  right: -7px;
+  top: -17px;
+}
+
+.nav__noitification.point {
+  font-size: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--notbase-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  right: -7px;
+  top: -17px;
 }
